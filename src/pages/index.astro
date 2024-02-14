@@ -1,0 +1,24 @@
+---
+import Layout from "@layouts/Base.astro";
+import BadgesPlugin from "@components/plugins/BadgesPlugin.vue";
+import Github from "@assets/icons/Github.astro";
+import Npm from "@assets/icons/Npm.astro";
+---
+
+<Layout
+	title="Welcome to my TailwindCSS tools"
+	description="A simple website where I showcase some tools for the TailwindCSS library."
+	canonical="/"
+>
+	<h1>Welcome to my TailwindCSS tools</h1>
+
+	<h2>Plugins</h2>
+	<BadgesPlugin client:only>
+		<a href="https://github.com/Kembec/tailwindcss-badge-plugin" target="_blank">
+			<Github />
+		</a>
+		<a href="https://www.npmjs.com/package/@kembec/tailwindcss-badge-plugin" target="_blank">
+			<Npm />
+		</a>
+	</BadgesPlugin>
+</Layout>

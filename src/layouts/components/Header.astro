@@ -1,0 +1,30 @@
+---
+import Github from "@assets/icons/Github.astro"
+
+const tailwindLogo = "https://kembec.com/img/dnlcxiyr9/image/upload/c_scale,w_120/v1707853721/kembec.com/tailwind/tailwindcss-logotype-white_iolhnu.webp";
+
+const githubLink = "https://github.com/search?q=owner%3AKembec+Tailwind&type=repositories"
+
+---
+
+<header>
+    <a href="/">
+        <span>My </span>
+        <img src={tailwindLogo} alt="tailwind-logo">
+        <span>tools</span>
+    </a>
+    <nav>
+        <a href={githubLink} target="_blank">
+            <Github />
+        </a>
+    </nav>
+</header>
+
+<style>
+    header {
+        @apply flex flex-nowrap py-5 border-b border-white/5 space-x-5 justify-between;
+    }
+    header > a {
+        @apply flex flex-nowrap items-center space-x-2 text-base;
+    }
+</style>
