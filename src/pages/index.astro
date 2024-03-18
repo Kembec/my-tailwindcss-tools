@@ -1,24 +1,55 @@
 ---
-import Layout from "@layouts/Base.astro";
-import BadgesPlugin from "@components/plugins/BadgesPlugin.vue";
-import Github from "@assets/icons/Github.astro";
-import Npm from "@assets/icons/Npm.astro";
+import ComponentIcon from "@assets/icons/ComponentIcon.astro";
+import PluginIcon from "@assets/icons/PluginIcon.astro";
+import TemplateIcon from "@assets/icons/TemplateIcon.astro";
+import LayoutBase from "@layouts/LayoutBase.astro";
+
+const iconSize = 72;
 ---
 
-<Layout
+<LayoutBase
 	title="Welcome to my TailwindCSS tools"
 	description="A simple website where I showcase some tools for the TailwindCSS library."
 	canonical="/"
 >
-	<h1>Welcome to my TailwindCSS tools</h1>
+	<h1>Welcome to my <span>TailwindCSS</span> tools</h1>
 
-	<h2>Plugins</h2>
-	<BadgesPlugin client:only>
-		<a href="https://github.com/Kembec/tailwindcss-badge-plugin" target="_blank">
-			<Github />
+	<div class="boxes">
+		<a href="/plugins">
+			<PluginIcon
+				height={iconSize}
+				width={iconSize}
+			/>
+			<span>Plugins</span>
 		</a>
-		<a href="https://www.npmjs.com/package/@kembec/tailwindcss-badge-plugin" target="_blank">
-			<Npm />
+		<a href="#">
+			<ComponentIcon
+				height={iconSize}
+				width={iconSize}
+			/>
+			<span>Components</span>
 		</a>
-	</BadgesPlugin>
-</Layout>
+		<a href="#">
+			<TemplateIcon
+				height={iconSize}
+				width={iconSize}
+			/>
+			<span>Templates</span>
+		</a>
+	</div>
+</LayoutBase>
+<style>
+	h1 {
+		font-family: var(--font-serif);
+		@apply lg:!text-7xl !text-4xl lg:max-w-[60%] max-w-[80%] mx-auto drop-shadow-md my-10;
+	}
+	h1 > span {
+		@apply text-sky-500 text-[110%] inline-block;
+	}
+	.boxes {
+		@apply grid grid-cols-1 gap-5 lg:grid-cols-3 m-auto;
+	}
+	.boxes > a {
+		@apply p-7 rounded-lg border border-zinc-700 flex flex-row items-center space-x-4 text-lg hover:bg-zinc-800 drop-shadow-md;
+	}
+</style>

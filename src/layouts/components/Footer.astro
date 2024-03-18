@@ -1,28 +1,20 @@
----
-    const tailwindLogo = "https://kembec.com/img/dnlcxiyr9/image/upload/c_scale,e_grayscale,w_180/v1707853721/kembec.com/tailwind/tailwindcss-logotype-white_iolhnu.webp";
-
----
 <footer>
-    <div class="logo">
-        <span>My </span>
-        <img src={tailwindLogo} alt="tailwind-logo">
-        <span>tools</span>
-    </div>
-    <a href="https://twitter.com/kembec" target="_blank">@kembec</a>
+	<a
+		href="https://twitter.com/kembec"
+		target="_blank"
+	>
+		@Kembec
+	</a>
 </footer>
 <style>
-    footer {
-        @apply border-t border-slate-800 py-5 mt-10 flex flex-col;
-    }
-    footer > * {
-        @apply mx-auto;
-    }
+	footer {
+		@apply border-t border-zinc-800 mt-auto flex flex-col h-16;
+	}
+	footer > * {
+		@apply m-auto;
+	}
 
-    .logo {
-        @apply flex flex-nowrap items-center space-x-2 text-2xl;
-    }
-    
-    a {
-        @apply text-slate-500
-    }
+	a {
+		@apply text-zinc-500;
+	}
 </style>

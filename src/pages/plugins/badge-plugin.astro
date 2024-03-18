@@ -1,0 +1,13 @@
+---
+import BadgePlugin from "@components/plugins/BadgePlugin.vue";
+import LayoutPlugin from "@layouts/LayoutPlugin.astro";
+---
+
+<LayoutPlugin
+	title="My plugins for TailwindCSS"
+	description=""
+	canonical="/plugins"
+>
+	<h1>Badge Plugin</h1>
+	<BadgePlugin client:load />
+</LayoutPlugin>
